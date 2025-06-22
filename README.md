@@ -45,7 +45,7 @@ pip install -r requirements.txt
 # 3. Run the scraper
 python flipkart_scraper.py
 
-
+```
 ## 💡 Next Steps
 
 - Expand scrape to **other price ranges/categories**  

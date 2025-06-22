@@ -50,4 +50,4 @@ python flipkart_scraper.py
 
 - Expand scrape to **other price ranges/categories**  
 - Add **data analysis or visualization** (e.g., price distribution, brand comparison)  
-- Integrate into a **dashboard** or **web app** using Streamlit or Flask
+- (Optional) Extend into a dashboard or web app using Streamlit or Flask for price comparison or filtering

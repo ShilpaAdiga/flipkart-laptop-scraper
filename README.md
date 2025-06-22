@@ -1,48 +1,33 @@
 # Flipkart Laptop Price Scraper 🖥️📊
 
-This Python project scrapes laptops under ₹60,000 from [Flipkart](https://www.flipkart.com) using `requests` and `BeautifulSoup`.
+This Python project scrapes laptop listings under ₹60,000 from [Flipkart](https://www.flipkart.com) using `requests` and `BeautifulSoup`, then cleans and exports the data to Excel.
 
-It collects:
-- Laptop Brand
-- Full Product Name
-- Price
-- Rating
-- Product Link
+## ✅ Features
 
-The data is cleaned and saved into an Excel file (`flipkart_full_data.xlsx`), which is ready for analysis or business use.
+- Scrapes brand, full product name, price, rating, and link
+- Visits product pages to get the full name (with fallback cleaning if blocked)
+- Handles 429 errors using time delay
+- Exports cleaned data to `flipkart_full_data.xlsx`
 
----
+## 📊 Sample Output
 
-## 🔧 Tools Used
+| Brand | Product Name | Price | Rating |
+|-------|--------------|-------|--------|
+| HP    | HP Pavilion Ryzen 5 ... | ₹57,990 | 4.2 |
+| ASUS  | ASUS Vivobook 15 ...    | ₹58,490 | 4.3 |
 
-- **Python**
-- **BeautifulSoup** – HTML parsing
-- **Pandas** – Data structuring and Excel export
-- **Requests** – HTTP requests
-- **OpenPyXL** – Excel file writing
+## 🛠️ Tools Used
 
----
-
-## 📄 Features
-
-- Scrapes main listing page and optionally fetches full product name from each product page
-- Handles truncated product names (ending with `...`)
-- Adds delay to avoid rate-limiting (HTTP 429)
-- Cleans and exports data to Excel
-
----
-
-## 📁 Sample Output
-
-| Brand  | Product Name | Price | Rating |
-|--------|--------------|-------|--------|
-| HP     | HP Pavilion Ryzen 5... | ₹57,990 | 4.2 |
-| ASUS   | ASUS Vivobook 15...    | ₹58,490 | 4.3 |
-
----
+- Python
+- BeautifulSoup
+- Requests
+- pandas
+- openpyxl
 
 ## 🚀 How to Run
 
+1. Clone the repo  
+2. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
-python flipkart_scraper.py
